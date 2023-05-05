@@ -46,6 +46,38 @@ a {
     opacity: 0.9;
 }
 
+.heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
 /* ========================= Header ========================= */
 .header {
     background: #FFFCF4;
@@ -179,7 +211,6 @@ a {
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.86;
-
     color: #5F5B53;
 }
 
@@ -275,4 +306,138 @@ a {
     line-height: 1.23;
 
     color: #171100;
+}
+
+/* ========================= Popular ========================= */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular header .desc {
+    width: 458px;
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+
+    color: #5F5B53;
+}
+
+.popular header .slider-control {
+    display: flex;
+    gap: 18px;
+}
+
+.popular header .chevron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.popular header .chevron:hover {
+    color: white;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+
+/* List course */
+.popular .list-courses {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.popular .item {
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #E2DFDA;
+}
+
+.popular .item:hover {
+    border: 1px solid transparent;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+}
+
+.popular .item .thumb {
+    width: calc(100% + 2px);
+    height: 278px;
+    object-fit: cover;
+    margin: -1px;
+    border-radius: 12px 12px 0px 0px;
+    vertical-align: bottom;
+}
+
+.popular .item .info {
+    padding: 15px 22px 22px;
+}
+
+.popular .item .quality,
+.popular .item .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular .item .title a {
+    padding-right: 6px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+
+    color: #171100;
+}
+
+.popular .item .quality span {
+    margin-left: 6px;
+    font-weight: 400;
+    font-size: 1.6rem;
+
+    color: #FEA31B;
+}
+
+.popular .item .desc {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+
+    color: #5F5B53;
+}
+
+.popular .item .oder {
+    margin-top: 12px;
+}
+
+.popular .item .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+
+    color: #171100;
+}
+
+.popular .item .btn-oder {
+    width: 118px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.popular .item .btn-oder:hover {
+    background: #FFB900;
+    opacity: 1;
 }
